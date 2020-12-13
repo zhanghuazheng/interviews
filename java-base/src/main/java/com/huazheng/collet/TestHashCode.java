@@ -1,4 +1,4 @@
-package com.huazheng.test;
+package com.huazheng.collet;
 
 import com.huazheng.entiy.Student;
 import org.junit.Test;
