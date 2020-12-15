@@ -1,0 +1,17 @@
+# Default ignored files
+/workspace.xml
+
+#增加不常用的忽略项
+.svn/
+.settings/
+.idea/
+target/
+*.project
+*.class
+*.classpath
+*.iml
+*.uml
+.metadata/
+*.uml
+*.bak
+*.log*
