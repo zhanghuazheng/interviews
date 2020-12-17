@@ -1,0 +1,12 @@
+server:
+  port: 8100
+
+#自定义一些属性
+zhz:
+  name: zhanghuazheng
+  age: 20
+
+#通过使用该配置可以实现多环境的切换
+spring:
+  profiles:
+    active: dev

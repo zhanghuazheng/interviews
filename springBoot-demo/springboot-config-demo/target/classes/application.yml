@@ -1,0 +1,10 @@
+server:
+  port: 8100
+
+#自定义一些属性
+zhz:
+  name: zhanghuazheng
+  age: 20
+spring:
+  profiles:
+    active: dev
