@@ -1,9 +1,34 @@
 package com.huazheng.collet;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.UnmodifiableIterator;
 import com.huazheng.entiy.Student;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class TestHashCode {
+    private List<Student> list = new ArrayList<>();
+
+    @Before
+    public void init(){
+        Student zhz = new Student("zhz", ThreadLocalRandom.current().nextInt(100));
+        Student zhq = new Student("zhq", ThreadLocalRandom.current().nextInt(100));
+        Student zhw = new Student("zhw", ThreadLocalRandom.current().nextInt(100));
+        Student zhe = new Student("zhe", ThreadLocalRandom.current().nextInt(100));
+        Student zhr = new Student("zhr", ThreadLocalRandom.current().nextInt(100));
+
+        list.add(zhz);
+        list.add(zhq);
+        list.add(zhw);
+        list.add(zhe);
+        list.add(zhr);
+    }
+
     @Test
     public void testHash(){
         Student zhz = new Student("zhz", 30);
@@ -37,6 +62,21 @@ public class TestHashCode {
         Student chx = new Student("zhz", 21);
         System.out.println(zhz.equals(chx));
         System.out.println(zhz.hashCode()==chx.hashCode());
+    }
+
+    @Test
+    public void testHash4(){
+        for (Student student:list) {
+            System.out.println(student);
+        }
+    }
+
+    @Test
+    public void testHash5(){
+        ImmutableMap<String, Student> map = Maps.uniqueIndex(list, Student::getName);
+        for (String s : map.keySet()) {
+            System.out.println(s+":"+map.get(s));
+        }
 
     }
 }
