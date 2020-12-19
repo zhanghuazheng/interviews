@@ -77,6 +77,28 @@ public class TestHashCode {
         for (String s : map.keySet()) {
             System.out.println(s+":"+map.get(s));
         }
+    }
 
+    @Test
+    public void testHash6(){
+        String tranDate = "20201102";
+        String startDate = "20201101";
+        String endDate = "20201102";
+        String optionType = "01";
+
+        if("01".equals(optionType) &&(startDate != null && !"".equals(startDate)) && (tranDate !=null &&!"".equals(tranDate))){
+            if(tranDate.compareTo(startDate)>0){
+                System.out.println("开始日期小于了交易日期");
+
+            }
+        }
+
+
+        if((endDate != null && !"".equals(endDate)) && (tranDate !=null &&!"".equals(tranDate))){
+            if(tranDate.compareTo(endDate)>0){
+                System.out.println("结束日期日期小于了交易日期");
+
+            }
+        }
     }
 }
