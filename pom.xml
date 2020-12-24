@@ -19,6 +19,7 @@
         <module>java-base</module>
         <module>origin-spring</module>
         <module>springBoot-demo</module>
+        <module>dubbo-demo</module>
     </modules>
 
     <properties>
