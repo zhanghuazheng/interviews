@@ -1,8 +1,6 @@
 package com.huazheng;
 
 import com.huazheng.abstrac.AbstractJobProcess;
-import com.huazheng.service.SPL1Job;
-import com.huazheng.service.SPL2Job;
 import com.huazheng.service.SPL3Job;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
