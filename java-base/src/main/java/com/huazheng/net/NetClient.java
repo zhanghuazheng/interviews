@@ -21,11 +21,11 @@ public class NetClient {
             socket = new Socket("localhost", 9999);
             String msg = "你好啊";
 
-            while (true){
+            while (true) {
                 out = socket.getOutputStream();
-                    Thread.sleep(1000);
-                    out.write(msg.getBytes());
-//                    out.flush();
+                Thread.sleep(1000);
+                out.write(msg.getBytes());
+                out.flush();
 
             }
 
@@ -34,10 +34,10 @@ public class NetClient {
             e.printStackTrace();
         } finally {
             try {
-                if(out!=null){
+                if (out != null) {
                     out.close();
                 }
-                if(socket!=null){
+                if (socket != null) {
                     socket.close();
                 }
             } catch (Exception e) {
