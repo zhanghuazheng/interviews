@@ -13,7 +13,7 @@ import java.beans.PropertyDescriptor;
 import java.util.*;
 
 /**
- * @description:
+ * @description: 该工具类主要实现JavaBean与Map(包含空键是否忽略，是否处理驼峰,指定Map类型,不支持多级)进行互转
  * @projectName:interviews
  * @see:com.huazheng.utils
  * @author:zhanghuazheng
